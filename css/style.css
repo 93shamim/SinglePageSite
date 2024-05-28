@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Define CSS variables for theme customization */
+    --theme-bg: snow;
+    --contenthead-color: black;
+    --theme-color: #fe6347;
+}
+html{scroll-behavior: smooth;}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--theme-bg);
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    display: flex; /* Use flexbox to make the body a flex container */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex: 1; /* Ensure the container takes up the full width */
+}
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 17%;
+    /*max-width: 250px;
+    min-width: 90px;*/ 
+    height: 100vh; 
+    /* justify-content: center; */
+    background-color: var(--theme-color);
+}
+
+.company {
+    color: #f1f1f1; 
+    font-size: 3.9vh;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 80px;
+    margin-left: 25px;
+    /* text-wrap: wrap;
+    text-align: center; */    
+}
+
+.sidenav ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    padding: 0; 
+    margin: 0; 
+}
+
+.sidenav ul a {
+    display: flex;
+    text-decoration: none;
+    font-size: 2.5vh;
+    font-weight: bold;
+    color: #f1f1f1;
+    /* justify-content: center; */
+    padding: 10px 30px; 
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.sidenav ul a:hover {
+  background-color: var(--theme-bg);
+  color: var(--theme-color);
+  transform: scale(1.1); 
+    /*color: #ffcc00;*/ 
+}
+
+/* Side Nav Responsive */
+@media only screen and (max-width: 700px) {
+  .sidenav {
+    width: 17%;
+    font-size: 2vh;
+  }
+  .sidenav ul{
+    margin-left: -20px;
+  }
+  .company{
+    margin-left: 10px;
+    font-size: 2.7vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .sidenav {
+    width: 16%;
+    font-size: 1.8vh;
+  }
+  .sidenav ul{
+    margin-left: -18px;
+  }
+  .company{
+    margin-left: 1px;
+    font-size: 2.5vh;
+  }
+}
+
+/* start body content section */
+.content{
+    width: 79%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 2%;
+    /* border: 2px solid #da1feb; */
+}
+.chead {
+    color: var(--contenthead-color); 
+    font-size: 7vh;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 80px;
+}
+
+/* body head tag Responsive */
+@media only screen and (max-width: 700px) {
+  .chead {
+    font-size: 5.8vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .chead {
+    font-size: 5.7vh;
+  }
+}
+
+/* start body part header name with underline */
+h1 {
+    color: var(--theme-color);
+    font-size: 5vh;
+    /* font-weight:600; */
+    display: inline-block;
+    padding-bottom: 10px;
+    position: relative;
+    margin-top:50px;
+    margin-bottom:20px;
+  }
+h1:before{
+      content: "";
+      position: absolute;
+      width: 25%;
+      bottom: 0;
+      border-bottom: 7px solid var(--theme-color);
+      border-radius: 50px;
+}
+
+/* body part header Responsive */
+@media only screen and (max-width: 700px) {
+  .h1 {
+    font-size: 6.5vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .h1 {
+    font-size: 4.8vh;
+  }
+}
+
+/* start body galary */
+.galary{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    overflow: hidden;
+    /* margin: 15px; */
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.03);
+
+}
+.services p,.designer p,.packages p{
+    padding: 0;
+    margin: 0;
+    text-wrap:wrap;
+    text-align:justify;
+}
+/* Designer Profile Card */
+.cards {
+    /* display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    /*margin-top:20px; */
+    box-sizing: border-box;  
+}
+
+.card {
+    padding: 0 0px;
+    float: left;
+    width: 31.5%;
+    border: 1px solid #ccc;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* max-width: 400px; */
+    margin: 10px; 
+    background-color: #f1f1f1;
+    /* text-align: center; */
+    /* border-radius: 10px; */
+    /* overflow: hidden; */
+}
+.card:hover{
+    border: 1px solid #777;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(70%);
+}
+
+.card .name {
+    padding: 0 15px 15px;
+    color: #323131;
+
+}
+.card .role {
+    padding: 0 15px 15px;
+    color: #838181;
+    font-size: 16px;
+}
+.card p {
+    padding: 0 15px 15px;
+    color: #323131;
+    font-size: 16px;
+}
+@media only screen and (max-width: 1518px) {
+  .card {
+    width: 30.99999%;
+    margin: 6px 10px;
+  }
+}
+@media only screen and (max-width: 1192px) {
+  .card {
+    width: 28.99999%;
+    margin: 6px 10px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .card {
+    width: 40.99999%;
+    margin: 6px 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .card {
+    width: 100%;
+  }
+}
+
+/* Packages Price Card */
+.pakage-card {
+    float: left;
+    width: 48.5%;
+    padding: 8px;
+  }
+  
+  .pakage-card-ul {
+    list-style-type: none;
+    border: 1px solid #eee;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .pakage-card-ul:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+  }
+  
+  .pakage-card-ul .top {
+    background-color: #616161;
+    color: white;
+    font-size: 25px;
+  }
+  
+  .pakage-card-ul li {
+    border-bottom: 1px solid #e0dede ;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Package Price Sectoin */
+  .BasicPackPrice, .ProPackPrice{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* gap: 10px;*/ /*Adjusts the spacing between elements */
+  }
+  .BasicPackPrice button , .ProPackPrice button {
+    /* padding: 5px 10px; */
+    font-size: 35px;
+    border: none;
+    cursor: pointer;
+  }
+  .BasicPackPrice p , .ProPackPrice p {
+    margin: 0;
+    font-size: 25px;
+  }
+  .BasicPackPrice p:last-child , .ProPackPrice p:last-child {
+    flex-basis: 100%; /* Forces the last <p> to take up the full width, causing it to wrap */
+    margin-top: 10px; /* Optional: adds some space above the last <p> */
+    font-size: 20px;
+    text-align: center;
+    color:#616161 ;
+  }
+/* Package Price Button Section */
+  .basic-button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform .2s;
+  }
+  .basic-button:hover {
+    transform: scale(1.03);
+    background-color: var(--theme-color);
+  }
+
+  .pro-button {
+    background-color:var(--theme-color);
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform .2s;
+  }
+  .pro-button:hover {
+    transform: scale(1.03);
+    background-color: #f84d2f;
+  }
+
+/* Package price Section responsve */
+  @media only screen and (max-width: 700px) {
+  .pakage-card {
+    width: 42.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .pakage-card {
+    width: 100%;
+ }
+}
+  .basicThankmsg,.proThankmsg, .submitmsg{
+    font-size: 20px; 
+    color:var(--theme-color); 
+    text-align: center;
+    font-weight: bold;
+  }
+
+
+/* Contact Form  */
+form label{
+    font-size: 20px;
+}
+form input {
+    font-size: 20px;
+    padding: 8px;
+    width: 97%;
+    outline: none;
+    border: 1px solid #c6c5c5;
+    background-color: transparent;
+}
+
+/* in form section i used <input type=submit> as button insated of directly button */
+/* form button {
+    width: 98.3%;
+    padding: 15px;
+    background-color: var(--theme-color);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+ }
+
+form button:hover {
+  background-color: #f84d2f;
+} */
+form .formsubmit {
+    width: 98.3%;
+    padding: 15px;
+    background-color: var(--theme-color);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+ }
+
+form .formsubmit:hover {
+  background-color: #f84d2f;
+  cursor: pointer;
+}
+
+.footer{
+    margin-top: 80px;
+    height: 70px;
+    background-color: #f1f1f1 ;
+
+}

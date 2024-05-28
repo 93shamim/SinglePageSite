@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript" src="/js/script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Left Side Navigation Bar -->
+        <nav class="sidenav">
+            <p class="company">Build</br> Interior</p></br></br></br>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#showcase">Showcase</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#designers">Designers</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Start body content -->
+        <div class="content" id="home">
+            <section class="chead">Interior Design</section>
+
+            <!--Showcase Section with gallary  -->
+            <section id="showcase">
+                <h1>Showcase.</h1>
+                <span class="galary">
+                    <div class="gallery-item"><img src="/images/showcase-01.jpg" alt="Showcase-01"></div>
+                    <div class="gallery-item"><img src="/images/showcase-02.jpg" alt="showcase-02"></div>
+                    <div class="gallery-item"><img src="/images/showcase-03.jpg" alt="Showcase-03"></div>
+                    <div class="gallery-item"><img src="/images/showcase-04.jpg" alt="Showcase-04"></div>
+                    <div class="gallery-item"><img src="/images/showcase-05.jpg" alt="Showcase-05"></div>
+                    <div class="gallery-item"><img src="/images/showcase-06.jpg" alt="Showcase-06"></div>
+                </span>
+            </section>
+
+            <!--Services Section  -->
+            <section id="services">
+                <h1>Services.</h1>
+                <span class="services">
+                    <p>We are a interior design service that focus on what's best for your home and what's best for you!</br></br>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.</p>
+                </span>
+            </section>
+
+            <!--Designers Section  -->
+            <section id="designers">
+                <h1>Designers.</h1>
+                <span class="designer">
+                    <p>The best team in the world.</br></br>
+
+                        We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</br></br>
+                        
+                        <strong> Our designers are thoughtfully chosen:</strong></p>
+
+                        <!-- Designers Profile card -->
+                        <div class="cards">
+
+                            <div class="card">
+                                <img src="/images/person-01.jpg" alt="John Doe">
+                                    <h3 class="name">John Doe</h3>
+                                    <p class="role">CEO & Founder</p>
+                                    <p class="description">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                            </div>
+
+                            <div class="card">
+                                <img src="/images/person-02.jpg" alt="Jane Doe">
+                                    <h3 class="name">Jane Doe</h3>
+                                    <p class="role">Designer</p>
+                                    <p class="description">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                            </div>
+
+                            <div class="card">
+                                <img src="/images/person-03.jpg" alt="Mike Ross">
+                                    <h3 class="name">Mike Ross</h3>
+                                    <p class="role">Architect</p>
+                                    <p class="description">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                            </div>
+
+                        </div>
+                </span>
+            </section>
+
+            <!--Packages Section  -->
+            <section id="packages">
+                <h1>Packages.</h1>
+                <span class="packages">
+                    <p>
+                        Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                    </p>
+
+                    <!--Packages Price Card  -->
+                    <div class="pakage-card">
+                        <ul class="pakage-card-ul">
+                          <li class="top">Basic</li>
+                          <li>Floorplanning</li>
+                          <li>10 Hours support</li>
+                          <li>Photography</li>
+                          <li>20% furniture discount</li>
+                          <li>Good deals</li>
+                          <li class="BasicPackPrice">
+                            <button id="basicDecrease">-</button>
+                             <p  id="basicPrice">$ 199</p> 
+                             <button id="basicIncrease">+</button> </br>
+                             <p id="basicQuantity">1 Room</p> 
+                          </li>
+                          <li><button type="button" class="basic-button" onclick="basicThank()">Sign Up</button></li>
+                        </ul>
+                        <p class="basicThankmsg" style="text-align: center;"></p>
+                      </div>
+
+                      <div class="pakage-card">
+                        <ul class="pakage-card-ul">
+                          <li class="top" style="background-color:#fe6347">Pro</li>
+                          <li>Floorplanning</li>
+                          <li>50 Hours support</li>
+                          <li>Photography</li>
+                          <li>50% furniture discount</li>
+                          <li>GREAT deals</li>
+                          <li class="ProPackPrice">
+                             <button id="proDecrease">-</button>
+                             <p  id="proPrice">$ 249</p> 
+                             <button id="proIncrease">+</button> </br>
+                             <p id="proQuantity">1 Room</p> 
+                          </li>
+                          <li> <button type="button" class="pro-button" onclick="proThank()">Sign Up</button></li>
+                        </ul>
+                        <p class="proThankmsg" style="text-align: center;"></p>
+                      </div>
+
+                </span>
+            </section>
+
+            <!--Contact Section  -->
+            <section id="contact">
+                <h1>Contact.</h1>
+                <span class="contact">
+                    <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+
+                    <!-- Contact Form -->
+                    <form class="contactForm" onsubmit="formsubmit(event)">
+                        <label for="name">Name</label></br>
+                        <input type="text" name="name" required></br></br>
+                        <label for="email">Email</label></br>
+                        <input type="email" name="email" required></br></br>
+                        <label for="message">Message</label></br>
+                        <input type="text" name="message" required></br></br>
+                        <input type="submit" class="formsubmit">
+                        <!-- <button type="button" onclick = "submitmsg()">Send Mesage</button></br> -->
+                        <p class="submitmsg"></p>
+                    </form>
+
+                </span>
+            </section>
+
+            <!-- Footer Section -->
+            <footer class="footer"></footer>
+        </div>
+
+    </div>
+
+</body>
+</html>
